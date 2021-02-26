@@ -14,7 +14,8 @@ import javax.swing.JOptionPane;
  * @author Fenohasina
  */
 public class DatabaseConnection {
-    MainFrame mainFrame;
+    public MainFrame mainFrame;
+    public Connection con;
     public DatabaseConnection(){
              
         try { 
@@ -25,7 +26,7 @@ public class DatabaseConnection {
         }
         try {
             
-            Connection con=DriverManager.getConnection( 
+             con=DriverManager.getConnection( 
                     "jdbc:mysql://localhost/db_bookshop","root","Fenohasina");
             System.out.println("Feno");
             
